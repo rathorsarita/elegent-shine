@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+//this is class for db transiction
 public class DatabaseConnection {
 
     //Creating Connection
