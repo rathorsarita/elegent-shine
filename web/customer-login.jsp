@@ -77,7 +77,7 @@
                     <div class="login-grids" >
                         <div class="login">
                             <div class="login-right" >
-                                <h3 style="color: pink; text-align: center;">Sign in with your account</h3>
+                                <h3 style="color: pink; font-family: 'Times New Roman', Times, serif;">Sign in with your account</h3>
                                 <%
                                     String credential = (String) session.getAttribute("credential");
                                     if (credential != null) {

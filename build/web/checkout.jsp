@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Online Shopping System</title>
+        <title>ElegentShine Cart</title>
         <!-- Importing all ui libs -->
         <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <link href="assets/css/style.css" rel="stylesheet" />
@@ -70,15 +70,21 @@
             </div>
         </div>
 
-        <div class="page-head" >
+      <!--  <div class="page-head" >
             <div class="container">
-                <h3 style="font-family: 'Times New Roman', Times, serif; color:#b8aeb8">Check Out</h3>
-            </div>
-        </div>
+			<center>
+			<h3 style="font-family: 'Times New Roman', Times, serif;color: #b8aeb8; background-color: #d0bdf4; padding: 10px 20px; margin: 20px auto; display: inline-block; ">Check Out</h3>
+
+
+                        </center> 
+			</div> 
+        </div> -->
         <div class="checkout">
             <div class="container">
-                 <h3 style="font-family: 'Times New Roman', Times, serif; color: #b8aeb8; background-color: #d0bdf4; padding: 10px 20px; margin: 20px auto; display: inline-block; text-align: center; position: relative; ">My Shopping Bag</h3>
-                <%
+			<center>
+                <h3 style="font-family: 'Times New Roman', Times, serif; color: white; background-color: pink; padding: 10px 20px; border-radius: 5px; display: inline-block;">My Shopping Bag</h3>
+            </center>   
+			   <%
                     int index = 0;
                     int paymentId = 101;
                     ResultSet rsCountCheck = DatabaseConnection.getResultFromSqlQuery("select count(*) from tblcart where customer_id='" + session.getAttribute("id") + "'");
@@ -87,7 +93,7 @@
                     System.out.println("cartItem  " + cartItem);
                     if (cartItem > 0) {
                 %>
-                <div class="table-responsive">
+               <div class="table-responsive" style="background-color: #f8f8f8;">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -170,9 +176,9 @@
                 <div>
                     <br> <br> <br>
                 </div>
-                <form action="GetProductsOrder" method="post">
+                <form action="GetProductsOrder" method="post" style="background-color:  #f8f8f8; padding: 20px; margin: 30px auto; border: 2px solid #b8aeb8; border-radius: 10px; width: 80%; color:#85858c">
                     <h4>
-                        <font color="blue"><strong>Billing Address</strong></font>
+                        <font color="#b4aedf" style= "font-family: 'Times New Roman', Times, serif;"><strong>Billing Address</strong></font>
                     </h4>
                     <br>
                     <%
@@ -183,36 +189,36 @@
                         <div class="form-group">
                             <label>Your Name</label> <input type="text" name="name"
                                                             value="<%=userInfoResult.getString("name")%>" placeholder=""
-                                                            required="" style="width: 1135px; height: 40px;"
+                                                            required="" style="width: 80%; height: 40px; background-color:white ;"
                                                             class="form-control" readonly>
                         </div>
                         <div class="form-group">
                             <label>Phone Number</label> <input type="text" name="phone"
                                                                value="<%=userInfoResult.getString("phone")%>" placeholder=""
-                                                               required="" style="width: 1135px; height: 40px;"
+                                                               required="" style="width:  80%; height: 40px; background-color:white ;"
                                                                class="form-control" readonly>
                         </div>
                         <div class="form-group">
                             <label>Email Id</label> <input type="text" name="email"
                                                            value="<%=userInfoResult.getString("email")%>" placeholder=""
-                                                           required="" style="width: 1135px; height: 40px;"
+                                                           required="" style="width:  80%; height: 40px; background-color:white ;"
                                                            class="form-control" readonly>
                         </div>
                         <div class="form-group">
                             <label>Address</label> <input type="text" name="address"
                                                           value="<%=userInfoResult.getString("address")%>" placeholder=""
-                                                          required="" style="width: 1135px; height: 100px;"
+                                                          required="" style="width:  80%; height: 100px; background-color:white ;"
                                                           class="form-control" readonly>
                         </div>
                         <div class="form-group">
                             <label>Pin Code</label> <input type="text" name="pincode"
                                                            value="<%=userInfoResult.getString("pin_code")%>" placeholder=""
-                                                           required="" style="width: 1135px; height: 40px;"
+                                                           required="" style="width:  80%; height: 40px; background-color:white ;"
                                                            class="form-control" readonly>
                         </div>
                         <div class="form-group">
                             <label>Select Address Type</label> <select name="addressType"
-                                                                       value="" style="width: 1135px; height: 40px;"
+                                                                       value="" style="width:  80%; height: 40px; background-color:white ;"
                                                                        class="form-control">
                                 <option>Home</option>
                                 <option>Office</option>
@@ -221,7 +227,7 @@
                         </div>
                         <div class="form-group">
                             <label>Select Payment Mode</label> <select name="payment"
-                                                                       style="width: 1135px; height: 40px;" class="form-control">
+                                                                       style="width:  80%; height: 40px; background-color:white ;" class="form-control">
                                 <option>COD</option>
                                 <option>Credit Card</option>
                                 <option>Debit Card</option>
@@ -250,13 +256,14 @@
                 } else {
                 %>
                 <center>
-                    <strong>Thanks for giving order.</strong>
-                </center>
+						<strong style="font-family: 'Times New Roman', Times, serif; color: #b8aeb8; background-color: #d0bdf4; padding: 10px 20px; border-radius: 5px; display: inline-block;">Thanks for giving order.</strong>
+				</center>
+
                 <%
                     if (index == 0) {
                 %>
                 <center>
-                    <strong>There is no item(s) in your Cart.</strong>
+                    <strong style="font-family: 'Times New Roman', Times, serif; color:black;">There is no item(s) in your Cart.</strong>
                 </center>
                 <%
                     }

@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Online Shopping System</title>
+        <title>Admin Deliver Order </title>
         <!-- Importing all ui libs -->
         <link href="assets/css/bootstrap.css" rel="stylesheet" />
         <link href="assets/css/font-awesome.css" rel="stylesheet" />
@@ -20,7 +20,7 @@
         <script src="js/jquery.easing.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     </head>
-    <body>
+    <body style=" font-family: 'Times New Roman', Times, serif; color:#9d9e9c;">
         <%
             //Checking whether admin in session or not
             if (session.getAttribute("uname") != null && session.getAttribute("uname") != "") {

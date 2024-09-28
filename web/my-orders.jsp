@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Online Shopping System</title>
+        <title>ElegentShine Order</title>
         <!-- Importing all ui libs -->
         <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <link href="assets/css/style.css" rel="stylesheet" />
@@ -21,13 +21,14 @@
         <script src='../../../../../../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
         <script src="../../../../../../m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
     </head>
-    <body>
+         <body style="background-image: url('./product.jpg'); background-size: cover; background-position: center; font-family: 'Times New Roman', Times, serif; color: pink;">
+
         <%
             //Checking whether customer in session or not
             if (session.getAttribute("name") != null && session.getAttribute("name") != "") {
         %>
     <body>
-        <div class="ban-top">
+        <div class="ban-top" style="background-color:black; font-family: 'Times New Roman', Times, serif; color: pink>
             <div class="container">
                 <div class="top_nav_left">
                     <nav class="navbar navbar-default">
@@ -42,7 +43,7 @@
                         </nav>
                     </div>
                     <div class="top_nav_right">
-                        <div class="cart box_1">
+                        <div class="cart box_1"  style="background-color: pink;">
                             <a href="checkout.jsp"> 
                             <%
                                 //Getting count of products of cart
@@ -60,22 +61,24 @@
                             </h3>
                         </a>
                         <p>
-                            <a href="javascript:;" class="simpleCart_empty">My Cart</a>
+                            <a href="javascript:;" class="simpleCart_empty" style="font-family: 'Times New Roman', Times, serif;">My Cart</a>
                         </p>
                     </div>
                 </div>
                 <div class="clearfix"></div>
             </div>
         </div>
-        <div class="page-head">
+      <!--  <div class="page-head" >
             <div class="container">
                 <h3>My Orders</h3>
             </div>
-        </div>
+        </div> -->
         <div class="checkout">
             <div class="container">
-                <h3>My Orders</h3>
-                <div class="table-responsive">
+			<center>
+                <h3 style="font-family: 'Times New Roman', Times, serif; color: #85858c; background-color: #f8f8f8; padding: 10px 20px; border-radius: 5px; display: inline-block;">My Orders</h3>
+				</center>
+                <div class="table-responsive" style="background-color:  #f8f8f8; padding: 20px; margin: 30px auto; border: 2px solid #b8aeb8; border-radius: 10px; width: 100%; color:#85858c">
                     <table class="table table-bordered">
                         <thead>
                             <tr>

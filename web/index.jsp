@@ -3,229 +3,7 @@
 <%@ page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
-<style>
-		/* General Page Styles */
-body {
-    padding: 0;
-    margin: 0;
-    background-color: #d0bdf4; /* Light background for the whole page */
-    font-family: 'Times New Roman', Times, serif;
-}
 
-/* Navigation Bar Styles */
-.ban-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333; /* Dark background for navbar */
-    padding: 10px 20px;
-}
-
-.navbar-header .navbar-toggle {
-    border-color: white;
-}
-
-.navbar-brand {
-    font-family: 'Times New Roman', Times, serif;
-    color: #e698a9; /* Custom shop name color */
-    font-size: 28px;
-}
-
-.navbar-nav li a {
-    color: white; /* White text for navbar links */
-    font-size: 18px;
-    padding: 10px;
-}
-
-.navbar-nav li a:hover {
-    text-decoration: underline;
-}
-
-.cart {
-    color: white;
-    display: flex;
-    align-items: center;
-}
-
-.cart .total {
-    font-size: 18px;
-    margin-right: 10px;
-}
-
-.glyphicon-shopping-cart {
-    font-size: 24px;
-}
-
-/* Banner Grid Styling */
-.banner-grid {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    background-color: #dedbe2; /* Light background for banner */
-	 font-family: 'Times New Roman', Times, serif;
-}
-
-.banner-grid img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	 font-family: 'Times New Roman', Times, serif;
-}
-
-	
-
-/* Product Section Styles */
-.product-easy {
-    padding: 30px 0;
-    background-color: #e5eaf5; /* Light color for product section */
-	 font-family: 'Times New Roman', Times, serif;
-}
-
-.product-men {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    border: 2px solid rgb(240, 206, 227);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 20px;
-    transition: all 0.3s ease;
-}
-
-
-.item img {
-    max-width: 150px;
-    border-radius: 50%;
-    box-shadow: 1px 1px 1px 1px black;
-}
-
-.item-info-product h4 {
-    font-size: 20px;
-    margin-top: 10px;
-    color: #333;
-}
-
-.item-info-product h5 {
-    font-size: 16px;
-    color: #777;
-}
-
-.info-product-price .item_price {
-    font-size: 20px;
-    color: #ff6f61;
-    font-weight: bold;
-}
-
-.info-product-price del {
-    color: #999;
-    margin-left: 10px;
-}
-
-.btn-warning {
-    background-color: #ff6f61;
-    border-color: #ff6f61;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.btn-warning:hover {
-    background-color: #ff4e42;
-}
-
-/* Footer Styles */
-.footer-section {
-    background-color: #25282b;
-    color: white;
-    padding: 40px;
-    margin-top: 40px;
-}
-
-.footer-section h4 {
-    font-size: 22px;
-    color: #e698a9;
-    text-align: left;
-    font-family: 'Gill Sans', sans-serif;
-    margin-bottom: 15px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #d3d3d3;
-    font-family: 'Lato', sans-serif;
-}
-
-.footer-section ul li i {
-    margin-right: 10px;
-    color: #e698a9;
-}
-
-.footer-section ul li a {
-    color: #e698a9;
-    text-decoration: none;
-    font-size: 16px;
-    font-family: 'Lato', sans-serif;
-}
-
-.footer-section ul li a:hover {
-    text-decoration: underline;
-}
-
-.registered-office {
-    text-align: center;
-    font-family: 'Gill Sans', sans-serif;
-    color: white;
-    margin-top: 30px;
-}
-
-.registered-office h2 {
-    font-size: 22px;
-    color: #e698a9;
-    margin-bottom: 10px;
-    font-family: 'Papyrus', Fantasy;
-}
-
-.registered-office p {
-    font-size: 16px;
-    color: #d3d3d3;
-}
-
-footer hr {
-    border: 0;
-    height: 1px;
-    background-color: white;
-    margin-top: 20px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.footer-social-links a {
-    color: white;
-    font-size: 20px;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.footer-social-links a:hover {
-    color: #e698a9;
-}
-
-	</style>
     <!-- Importing all ui libs -->
    <link href="assets/css/font-awesome.css" rel="stylesheet" />
    <link href="assets/css/style.css" rel="stylesheet" />
@@ -242,9 +20,10 @@ footer hr {
     <script src='../../../../../../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
   <script src="../../../../../../m.servedby-buysellads.com/monetization.js" type="text/javascript"></script> 
 </head>
-<body style="font-family: 'Times New Roman', Times, serif;">
-<body>
-    <div class="ban-top">
+     <body style=" background-color:#c8caf1 font-family: 'Times New Roman', Times, serif; color: pink;">
+
+
+    <div class="ban-top" style="background-color:black; font-family: 'Times New Roman', Times, serif; color: pink>>
         <div class="container">
             <div class="top_nav_left">
                 <nav class="navbar navbar-default">
@@ -262,7 +41,7 @@ footer hr {
                     </nav>
                 </div>
                 <div class="top_nav_right">
-                    <div class="cart box_1">
+                    <div class="cart box_1" style="background-color: pink;>
                         <a href="checkout.jsp"> 
                         <%
                             //Getting all cart details of the customer
@@ -280,7 +59,7 @@ footer hr {
                         </h3>
                     </a>
                     <p>
-                        <a href="javascript:;" class="simpleCart_empty">My Cart</a>
+                        <a href="javascript:;" class="simpleCart_empty" style="font-family: 'Times New Roman', Times, serif;">My Cart</a>
                     </p>
                 </div>
             </div>
@@ -326,10 +105,10 @@ footer hr {
         </script>
     </div>
     <br/>
-    <div class="product-easy">
+    <div class="product-easy"  style="background-color:#dadbf5 ;">
         <div class="container">
             <div class="container">
-                <h2>
+                <h2 style=" font-family: 'Times New Roman', Times, serif; color: white;">
                     <span><center>Our Products</center></span>
                 </h2>
             </div>
@@ -338,9 +117,9 @@ footer hr {
                 while (retriveProduct.next()) {
             %>
             <form action="AddToCart" method="post">
-                <div class="single-pro">
-                    <div class="col-md-3 product-men">
-                        <div class="men-pro-item simpleCart_shelfItem">
+                <div class="single-pro" >
+                    <div class="col-md-3 product-men" > 
+                        <div class="men-pro-item simpleCart_shelfItem"  style="color: black; background-color: #e6e3e6;">
                             <div class="men-thumb-item">
                                 <input type="hidden" name="productId"
                                        value="<%=retriveProduct.getInt("id")%>"> <img
@@ -376,7 +155,7 @@ footer hr {
             %>
         </div>
     </div>
-	<section class="footer-section">
+	<!--<section class="footer-section">
     <div class="row">
         <div class="col">
             <div class="sign-grds">
@@ -400,12 +179,14 @@ footer hr {
 								<hr /><br>
                    <!-- <h4>
                         &copy;  <span id="year"></span> Elegent<a href="https://data-flair.training" target="_blank"> Designed by : DataFlair</a>
-                    </h4> -->
+                    </h4> 
                 </div>
             </center>
         </div>
-    </div>
-</section>
+    </div> 
+	
+</section> -->
+ <jsp:include page="footer.jsp"></jsp:include>
 <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
 </script>

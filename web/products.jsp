@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Online Shopping System</title>
+        <title>ElegentShine Pro</title>
         <!-- Importing all ui libs -->
         <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <link href="assets/css/style.css" rel="stylesheet" />
@@ -21,7 +21,7 @@
         <script src="../../../../../../m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
     </head>
      <body style="background-image: url('./sirii.jpg'); background-size: cover; background-position: center; font-family: 'Times New Roman', Times, serif; color: pink;">
-    <body>
+
         <div class="ban-top"  style="background-color:black; font-family: 'Times New Roman', Times, serif; color: pink>
             <div class="container">
                 <div class="top_nav_left">

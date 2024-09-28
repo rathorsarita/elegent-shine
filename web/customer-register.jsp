@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Online Shopping System</title>
+        <title>ElegentShine Registration</title>
         <!-- Importing all ui libs -->
         <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <link href="assets/css/style.css" rel="stylesheet" />
@@ -77,13 +77,13 @@
                     <div class="login-grids">
                         <div class="login">
                             <div class="login-bottom">
-                                <h3 style="color: pink; text-align: center;">Sign up for free</h3>
+                                <h3 style="font-family: 'Times New Roman', Times, serif; color: #85858c; ">SIGN UP HERE</h3>
                                 <%
                                     String success = (String) session.getAttribute("success-message");
                                     if (success != null) {
                                         session.removeAttribute("success-message");
                                 %>
-                                <div class='alert alert-success' id='success' style="width: 680px;">Customer
+                                <div class='alert alert-success' id='success' style="width: 680px; font-family: 'Times New Roman', Times, serif; color: #85858c;">Customer
                                     Register Successfully.</div>
                                     <%
                                         }
@@ -91,7 +91,7 @@
                                         if (fail != null) {
                                             session.removeAttribute("fail-message");
                                     %>
-                                <div class="alert alert-danger" id='danger' style="width: 680px;">Customer
+                                <div class="alert alert-danger" id='danger' style="width: 680px; font-family: 'Times New Roman', Times, serif; color: #85858c;">Customer
                                     Registration Fail,Please try again</div>
                                     <%
                                         }
@@ -99,38 +99,45 @@
                                 <form action="AddCustomer" method="post">
                                     <div class="sign-up">
                                         <h4>Your Name :</h4>
-                                        <input type="text" placeholder="Your Name" required="" style="width: 680px;" name="name">
+                                        <input type="text" placeholder="Name" style="width: 680px; font-family: 'Times New Roman', Times, serif; color: #85858c;" name="name" pattern="[A-Za-z ]+" title="Name must contain only letters." required>
                                     </div>
                                     <div class="sign-up">
                                         <h4>Email :</h4>
-                                        <input type="text" placeholder="Type here" required="" style="width: 680px;" name="email">
+                                        <input type="text" placeholder="Type here" required="" style="width: 680px; font-family: 'Times New Roman', Times, serif; color: #85858c;"
+										name="email"  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address (e.g., name@example.com).">
                                     </div>
                                     <div class="sign-up">
                                         <h4>Password :</h4>
-                                        <input type="password" placeholder="Password" required="" style="width: 680px;" name="password">
+                                        <input type="password" placeholder="Password" style="width: 680px; font-family: 'Times New Roman', Times, serif; color: #85858c;" name="password" 
+										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}"
+           title="Must contain at least one number, one uppercase letter, one lowercase letter, one special character (@#$%^&+=!), and be at least 8 characters long"
+               required>
                                     </div>
                                     <div class="sign-up">
                                         <h4>Phone :</h4>
-                                        <input type="text" placeholder="Type here" required="" style="width: 680px;" name="mobile">
+                                        <input type="text" placeholder="Type here" style="width: 680px; font-family: 'Times New Roman', Times, serif; color: #85858c;" name="mobile"
+										pattern="[6-9]\d{9}" title="Mobile number should contain only 10 digits and start with 6 to 9" maxlength="10" required>
                                     </div>
                                     <div class="sign-up">
                                         <h4>Gender :</h4>
-                                        <br> <select class="form-control" style="width: 680px;" name="gender">
+                                        <br> <select class="form-control" style="width: 680px;font-family: 'Times New Roman', Times, serif; color: #85858c;" name="gender">
                                             <option>Male</option>
-                                            <option>Female</option>
+                                            <option>Female</option
+											<option>Others</option>
                                         </select>
                                     </div>
                                     <br>
                                     <div class="sign-up">
                                         <h4>Address :</h4>
-                                        <input type="text" placeholder="Type here" required="" style="min-height: 100px; width: 680px;" name="address">
+                                        <input type="text" placeholder="Type here" required="" style="min-height: 100px; width: 680px; font-family: 'Times New Roman', Times, serif; color: #85858c;" name="address">
                                     </div>
                                     <div class="sign-up">
                                         <h4>Pin Code :</h4>
-                                        <input type="text" placeholder="Pincode" required="" style="width: 680px;" name="pincode">
+                                        <input type="text" placeholder="Pincode" maxlength="6" required="" style="width: 680px; font-family: 'Times New Roman', Times, serif; color: #85858c;" 
+										minlength="6" pattern="\d{6}"name="pincode"  oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);">
                                     </div>
                                     <div class="sign-up">
-                                        <input type="submit" value="REGISTER NOW" style="width: 680px;">
+                                        <input type="submit" value="REGISTER NOW"  style="width: 680px;" >
                                     </div>
                                 </form>
                             </div>
